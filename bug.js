@@ -36,17 +36,17 @@ var BugDispatch = {
         minDelay: 500,
         maxDelay: 10000,
         minBugs: 2,
-        maxBugs: 20,
+        maxBugs: 100,
         minSpeed: 5,
         maxSpeed: 10,
-        maxLargeTurnDeg: 150,
-        maxSmallTurnDeg: 10,
+        maxLargeTurnDeg: 250,
+        maxSmallTurnDeg: 20,
         maxWiggleDeg: 5,
         imageSprite: 'fly-sprite.png',
-        bugWidth: 13,
-        bugHeight: 14,
+        bugWidth: 53,
+        bugHeight: 54,
         num_frames: 5,
-        zoom: 10, // random zoom variation from 1 to 10 - 10 being full size.
+        zoom: 200, // random zoom variation from 1 to 10 - 10 being full size.
         canFly: true,
         canDie: true,
         numDeathTypes: 3,
@@ -338,8 +338,8 @@ BugController.prototype = BugDispatch;
 var SpiderController = function() {
     var spiderOptions = {
         imageSprite: 'spider-sprite.png',
-        bugWidth: 69,
-        bugHeight: 90,
+        bugWidth: 169,
+        bugHeight: 190,
         num_frames: 7,
         canFly: false,
         canDie: true,
@@ -350,7 +350,7 @@ var SpiderController = function() {
         minSpeed: 6,
         maxSpeed: 13,
         minBugs: 3,
-        maxBugs: 10
+        maxBugs: 110
     };
     this.options = mergeOptions(this.options, spiderOptions);
     this.initialize.apply(this, arguments);
